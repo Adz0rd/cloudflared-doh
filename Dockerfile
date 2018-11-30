@@ -9,8 +9,6 @@ RUN apk update && \
     apk add libc6-compat && \
     apk add ca-certificates
 
-#COPY config.yml /usr/local/etc/cloudflared/config.yml
-
 EXPOSE $LOCAL_PORT/tcp	$LOCAL_PORT/udp
 
 ADD https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.tgz $CLOUDFLARED.tgz
