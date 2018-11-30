@@ -7,6 +7,7 @@ ENV CLOUDFLARED=cloudflared
 RUN apk update && \
     apk upgrade && \
     apk add libc6-compat
+    apk add ca-certificates
 
 #COPY config.yml /usr/local/etc/cloudflared/config.yml
 
