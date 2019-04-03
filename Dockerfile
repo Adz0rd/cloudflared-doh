@@ -16,4 +16,5 @@ RUN tar -xvzf $CLOUDFLARED.tgz
 RUN rm $CLOUDFLARED.tgz
 
 RUN chmod u+x $CLOUDFLARED
+RUN $CLOUDFLARED update
 ENTRYPOINT $CLOUDFLARED proxy-dns --port $LOCAL_PORT --address 0.0.0.0
